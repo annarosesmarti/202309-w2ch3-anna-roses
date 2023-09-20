@@ -60,3 +60,10 @@ const deleteSongFromList = (title) =>
   );
 
 deleteSongFromList("Flowers");
+
+const getFullSong = (title) =>
+  artist.find((song) => song.title.toLowerCase() === title.toLowerCase());
+
+getFullSong("despechá");
+
+/*Una función que reciba el título de una canción y devuelva la canción completa.*/
