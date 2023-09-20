@@ -6,7 +6,7 @@ const artist = [
     genre: "R&B/Soul",
     lengthInSeconds: 294,
     yearOfRelease: 1968,
-    success: false,
+    isHit: false,
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const artist = [
     genre: "pop",
     lengthInSeconds: 157,
     yearOfRelease: 2022,
-    success: true,
+    isHit: true,
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const artist = [
     genre: "pop",
     lengthInSeconds: 200,
     yearOfRelease: 2023,
-    success: true,
+    isHit: true,
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const artist = [
     genre: "latino urbano",
     lengthInSeconds: 214,
     yearOfRelease: 2023,
-    success: false,
+    isHit: false,
   },
 ];
 
@@ -47,7 +47,7 @@ console.log(
     genre: "R&B/Soul",
     lengthInSeconds: 314,
     yearOfRelease: 1966,
-    success: false,
+    isHit: false,
   })
 );
 
@@ -70,3 +70,7 @@ const getGenreSongs = (artist, genre) =>
   artist.filter((song) => song.genre.toLowerCase() === genre.toLowerCase());
 
 console.log(getGenreSongs(artist, "R&B/Soul"));
+
+const getAllHits = (artist) => artist.filter((song) => song.isHit === true);
+
+console.log(getAllHits(artist));
