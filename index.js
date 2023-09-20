@@ -78,4 +78,8 @@ getAllHits(artist);
 const sortedSongYears = (artist) =>
   artist.toSorted((songA, songB) => songA.yearOfRelease - songB.yearOfRelease);
 
-console.log(sortedSongYears(artist));
+sortedSongYears(artist);
+
+const listOfTitles = (artist) => artist.map((song) => song.title);
+
+console.log(listOfTitles(artist));
