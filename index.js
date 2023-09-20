@@ -69,8 +69,13 @@ getFullSong("despechá");
 const getGenreSongs = (artist, genre) =>
   artist.filter((song) => song.genre.toLowerCase() === genre.toLowerCase());
 
-console.log(getGenreSongs(artist, "R&B/Soul"));
+getGenreSongs(artist, "R&B/Soul");
 
 const getAllHits = (artist) => artist.filter((song) => song.isHit === true);
 
-console.log(getAllHits(artist));
+getAllHits(artist);
+
+const sortedSongYears = (artist) =>
+  artist.toSorted((songA, songB) => songA.yearOfRelease - songB.yearOfRelease);
+
+console.log(sortedSongYears(artist));
