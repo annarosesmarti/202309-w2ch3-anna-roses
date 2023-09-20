@@ -66,4 +66,7 @@ const getFullSong = (title) =>
 
 getFullSong("despechá");
 
-/*Una función que reciba el título de una canción y devuelva la canción completa.*/
+const getGenreSongs = (artist, genre) =>
+  artist.filter((song) => song.genre.toLowerCase() === genre.toLowerCase());
+
+console.log(getGenreSongs(artist, "R&B/Soul"));
