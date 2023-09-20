@@ -82,4 +82,11 @@ sortedSongYears(artist);
 
 const listOfTitles = (artist) => artist.map((song) => song.title);
 
-console.log(listOfTitles(artist));
+listOfTitles(artist);
+
+const getAverageSongsDuration = (artist) =>
+  artist
+    .map((song) => song.lengthInSeconds)
+    .reduce((prev, curr) => prev + curr, 0) / artist.length;
+
+console.log(getAverageSongsDuration(artist));
