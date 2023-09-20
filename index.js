@@ -50,3 +50,13 @@ console.log(
     success: false,
   })
 );
+
+const deleteSongFromList = (title) =>
+  artist.splice(
+    artist.indexOf(
+      (deletedSong) => deletedSong.title.toLowerCase() === title.toLowerCase()
+    ),
+    1
+  );
+
+deleteSongFromList("Flowers");
